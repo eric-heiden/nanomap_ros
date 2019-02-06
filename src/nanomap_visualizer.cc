@@ -1,5 +1,5 @@
-#include "nanomap_visualizer.h"
-#include "frustum_visualization.h"
+#include "../include/nanomap/nanomap_visualizer.h"
+#include "../include/nanomap/frustum_visualization.h"
 
 void NanoMapVisualizer::SetLastPose(Matrix4 pose) { last_pose = pose; }
 

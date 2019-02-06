@@ -6,8 +6,8 @@
 #include <tf2_ros/transform_listener.h>
 #include <nav_msgs/Path.h>
 
-#include "nanomap.h"
-#include "nanomap_visualizer.h"
+#include "../include/nanomap/nanomap.h"
+#include "../include/nanomap/nanomap_visualizer.h"
 
 
 class NanoMapNode {

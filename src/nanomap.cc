@@ -1,4 +1,4 @@
-#include "nanomap.h"
+#include "../include/nanomap/nanomap.h"
 #include <algorithm>
 
 NanoMap::NanoMap()

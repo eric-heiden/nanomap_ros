@@ -1,4 +1,4 @@
-#include "nanoflann_two.hpp"
+#include "../../src/nanoflann_two.hpp"
 
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>

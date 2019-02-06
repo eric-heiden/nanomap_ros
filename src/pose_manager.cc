@@ -1,4 +1,4 @@
-#include "pose_manager.h"
+#include "../include/nanomap/pose_manager.h"
 
 void PoseManager::AddPose(NanoMapPose const &pose) {
   if (NANOMAP_DEBUG_PRINT) {

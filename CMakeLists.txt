@@ -21,20 +21,22 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_ros
 )
 
-find_package( Eigen3 REQUIRED )
+find_package(Eigen3 REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(PCL REQUIRED)
 
-include_directories ( src )
-include_directories( ${EIGEN3_INCLUDE_DIR} )
+include_directories(src)
+include_directories(${EIGEN3_INCLUDE_DIR})
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 
 catkin_package(
-
+  INCLUDE_DIRS include
+  LIBRARIES nanomap_ros
 )
 
 include_directories(
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -66,3 +68,9 @@ target_link_libraries( benchmarking_node nanomap_ros ${catkin_LIBRARIES} ${PCL_L
 
 add_executable( visualization_node example_nodes/visualization_node.cpp )
 target_link_libraries( visualization_node nanomap_ros ${catkin_LIBRARIES} ${PCL_LIBRARIES} orocos-kdl)
+
+install(TARGETS nanomap_ros
+    ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+    LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
